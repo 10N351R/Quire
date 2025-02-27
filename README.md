@@ -12,20 +12,21 @@ Author: 10N351R
 - Position masks
 
 ## Usage 
-`quire.py` can be executed using the following arguments:
-`python3 quire.py -length [1-5] -wordlist '[WORDLIST FILE]' -outfile [OUT FILE]`
+`quire.py` requires the following arguments following arguments:
+
+`python3 quire.py --length [1-5] --wordlist '[WORDLIST FILE]' --outfile [OUT FILE]`
 
 ### Flags
 | Flag          | Description                                                   |
 |---------------|---------------------------------------------------------------|
 | `-h` (`--help`)   | Show help menu                                                |
-| `-separator`    | Separator character between positions                         |
-| `-length`       | Number of positions to generate (1-5)                              |
-| `-outfile`      | Output file                                                   |
-| `-subs`         | Character substitutions (e.g., 'a:@ e:3')                     |
-| `-wordlist`     | Wordlist file                                                 |
-| `-append`       | Append n (numbers), l (letters), s (symbols) (e.g., ns, nnnn) |
-| `-appendstring` | String to append to the end of generated passwords            |
+| `--separator`    | Separator character between positions                         |
+| `--length`       | Number of positions to generate (1-5)                              |
+| `--outfile`      | Output file                                                   |
+| `--subs`         | Character substitutions (e.g., 'a:@ e:3')                     |
+| `--wordlist`     | Wordlist file                                                 |
+| `--append`       | Append n (numbers), l (letters), s (symbols) (e.g., ns, nnnn) |
+| `--appendstring` | String to append to the end of generated passwords            |
 | `-h1`           | Mask for position 1                                           |
 | `-h2`           | Mask for position 2                                           |
 | `-h3`           | Mask for position 3                                           |
