@@ -71,13 +71,13 @@ ___/\/\/\/\/\____/\/\/\/\____/\/\/\/\__/\/\____/\/\__/\/\/\/\/\/\_
 def main():
     print(logo)
     parser = argparse.ArgumentParser(description="A way to create wordlists from easy-to-remember words, separators, and substitutions")
-    parser.add_argument('-separator', type=str, default='', help="Separator between positions")
-    parser.add_argument('-length', type=int, choices=range(1, 6), required=True, help="Number of positions")
-    parser.add_argument('-outfile', type=str, required=True, help="Output file path")
-    parser.add_argument('-subs', type=str, default='', help="Character substitutions (e.g., 'a:@ e:3')")
-    parser.add_argument('-wordlist', type=str, required=True, help="Path to wordlist")
-    parser.add_argument('-append', type=str, default='', help="Append n (numbers), l (letters), s (symbols)")
-    parser.add_argument('-appendstring', type=str, default='', help="String to append at the end (cannot be used with -append)")
+    parser.add_argument('--separator', type=str, default='', help="Separator character between positions")
+    parser.add_argument('--length', type=int, choices=range(1, 6), required=True, help="Number of positions to generate (1-5)")
+    parser.add_argument('--outfile', type=str, required=True, help="Output file")
+    parser.add_argument('--subs', type=str, default='', help="Character substitutions (e.g., 'a:@ e:3')")
+    parser.add_argument('--wordlist', type=str, required=True, help="Wordlist file (e.g., ns, nnnn)")
+    parser.add_argument('--append', type=str, default='', help="Append n (numbers), l (letters), s (symbols)")
+    parser.add_argument('--appendstring', type=str, default='', help="String to append at the end (cannot be used with -append)")
     
     for i in range(1, 6):
         parser.add_argument(f'-h{i}', type=str, help=f"Mask for position {i}")
@@ -85,7 +85,7 @@ def main():
     args = parser.parse_args()
     
     if args.append and args.appendstring:
-        print("Error: -append and -appendstring cannot be used together.")
+        print("Error: --append and --appendstring cannot be used together.")
         return
     
     hardcoded = [getattr(args, f'h{i}', '') or '' for i in range(1, args.length + 1)]
