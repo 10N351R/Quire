@@ -2,7 +2,7 @@
 # Quire.py
 Author: 10N351R
 
-Quire.py` was created to generate wordlists for passwords that follow [complex schemas](https://xkcd.com/936/) comprised of easy-to-remember words, separators, and substitutions. 
+`Quire.py` was created to generate wordlists for passwords that follow [complex schemas](https://xkcd.com/936/) comprised of easy-to-remember words, separators, and substitutions. 
 
 `Quire.py` has several features including
 - Generating complex passwords up to 5 positions
