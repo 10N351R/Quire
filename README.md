@@ -12,7 +12,7 @@ Author: 10N351R
 - Position masks
 
 ## Usage 
-`quire.py` requires the following arguments following arguments:
+`Quire.py` requires the following arguments following arguments:
 
 `python3 quire.py --length [1-5] --wordlist '[WORDLIST FILE]' --outfile [OUT FILE]`
 
